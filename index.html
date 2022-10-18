@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synonyme Finder</title>
+    <link rel="shortcut icon" href="./img/book.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="header bg-design">
+      <div onclick="reload()" class="logo">
+        <img src="./img/book.jpg" alt="" />
+        <span>FindSyn</span>
+      </div>
+      <div onclick="showMenu()" class="menu">
+        <img src="./img/menu.ico" alt="" />
+      </div>
+
+      <div id="menu" class="menu-content bg-design d-none">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+
+      <div onclick="closeMenu()" class="text-and-input">
+        <span>Synonyme finder</span>
+        <div class="input-and-search">
+          <input id="input" type="text" placeholder="Search synonyms..." />
+          <div class="image">
+            <img onclick="getSynonyms()" src="./img/search.ico" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div onclick="closeMenu()" id="container" class="container">
+      <div id="search-result" class="search-result bg-design">
+        <marquee behavior="alternate" direction=""
+          >To find synonyms, simply type a word in the search box and click the
+          search button.
+        </marquee>
+      </div>
+
+      <div id="search-content" class="search-content"></div>
+    </div>
+
+    <div class="footer bg-design">
+      <span>©2022 All rights reserved.</span>
+      <!-- <span>https://www.openthesaurus.de/</span> -->
+    </div>
+  </body>
+</html>
