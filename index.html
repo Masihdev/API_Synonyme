@@ -20,17 +20,28 @@
         <img src="./img/menu.ico" alt="" />
       </div>
 
-      <div id="menu" class="menu-content bg-design d-none">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+      <div id="menu" class="bg-design d-none">
+        <a onclick="showImprint()">Impressum</a>
+        <a onclick="showPolicy()">Datenschutz</a>
       </div>
 
       <div onclick="closeMenu()" class="text-and-input">
-        <span>Synonyme finder</span>
+        <span>Synonym Finder</span>
         <div class="input-and-search">
-          <input id="input" type="text" placeholder="Search synonyms..." />
+          <input
+            id="input"
+            type="text"
+            placeholder="Search synonyms..."
+            onkeydown="if (event.keyCode == 13)
+                        document.getElementById('search-img').click()"
+          />
           <div class="image">
-            <img onclick="getSynonyms()" src="./img/search.ico" alt="" />
+            <img
+              id="search-img"
+              onclick="getSynonyms()"
+              src="./img/search.ico"
+              alt=""
+            />
           </div>
         </div>
       </div>
